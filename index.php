@@ -1,5 +1,5 @@
 <?php
-require_once 'app/controller/Controller.php';
+require_once 'app/controller.php';
 
 // Instantiate the Controller
 $controller = new Controller();
@@ -21,6 +21,6 @@ $controller->readAfspraken();
 </head>
 <body>
     <!-- Laad de View (HTML-formulier) -->
-    <?php require_once 'app/view/view.php'; ?>
+    <?php require_once 'app/view.php'; ?>
 </body>
 </html>
