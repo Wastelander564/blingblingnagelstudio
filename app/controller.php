@@ -31,7 +31,8 @@ class Controller {
 
             // Redirect to thank you page or show error
             if ($success) {
-                header("Location: ../index.php");
+                echo "bedankt voor uw afspraak";
+                header("Refresh: 2; url= ../alle_afspraken.php");
                 exit();
             } else {
                 echo "Er is een fout opgetreden bij het opslaan van de gegevens.";
@@ -43,6 +44,8 @@ class Controller {
         $afspraken = $this->model->getAfspraken();
         require 'afspraken.php'; // Load the view
     }
+    
+    
 }
 
 ?>

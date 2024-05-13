@@ -4,13 +4,8 @@ require_once 'app/controller.php';
 // Instantiate the Controller
 $controller = new Controller();
 
-// Handle form submission
-$controller->handleFormSubmission();
-
-// Display appointments
+$controller->readAfspraken();
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +14,6 @@ $controller->handleFormSubmission();
     <title>Afspraak maken</title>
 </head>
 <body>
-    <!-- Laad de View (HTML-formulier) -->
-    <?php require_once 'app/view.php'; ?>
+    
 </body>
 </html>
