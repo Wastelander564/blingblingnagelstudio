@@ -14,7 +14,7 @@ class Model {
     public function createAfspraak($kleur1, $kleur2, $kleur3, $kleur4, $telefoonnummer, $email, $afspraakDatum, $verzondenDatumTijd, $nagelbijtArrangement, $luxeManicure, $nagelreparatie) {
         try {
             // Prepared statement to prevent SQL injection
-            $stmt = $this->db->prepare("INSERT INTO Afspraak (kleur1, kleur2, kleur3, kleur4, telefoonnummer, email, afspraakDatum, verzondenDatumTijd, nagelbijtArrangement, luxeManicure, nagelreparatie) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            $stmt = $this->db->prepare("INSERT INTO Afspraak (kleur1, kleur2, kleur3, kleur4, telefoonnummer, email, afspraakDatum, verzondenDatumTijd, nagelbijtArrangement, luxeManicure, nagelreparatie) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
             // Execute the statement with the submitted data
             $stmt->execute([$kleur1, $kleur2, $kleur3, $kleur4, $telefoonnummer, $email, $afspraakDatum, $verzondenDatumTijd, $nagelbijtArrangement, $luxeManicure, $nagelreparatie]);
             return true; // Successfully added
