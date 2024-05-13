@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php';
+require_once '../config.php';
 
 class Model {
     private $db;
@@ -23,6 +23,12 @@ class Model {
             error_log("Database error: " . $e->getMessage());
             return false; // Error adding
         }
+    }
+    public function getAfspraken() {
+        $query = "SELECT * FROM Afspraak ORDER BY verzondenDatumTijd DESC";
+        $stmt = $this->db->prepare($query);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }
 ?>

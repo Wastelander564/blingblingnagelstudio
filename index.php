@@ -1,12 +1,16 @@
 <?php
-require_once 'app/controller.php';
+require_once 'app/controller/Controller.php';
 
-// Instantiëer de Controller
+// Instantiate the Controller
 $controller = new Controller();
 
-// Roep de methode aan om het formulier te verwerken
+// Handle form submission
 $controller->handleFormSubmission();
+
+// Display appointments
+$controller->readAfspraken();
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,6 +21,6 @@ $controller->handleFormSubmission();
 </head>
 <body>
     <!-- Laad de View (HTML-formulier) -->
-    <?php require_once 'app/view.php'; ?>
+    <?php require_once 'app/view/view.php'; ?>
 </body>
 </html>
