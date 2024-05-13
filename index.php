@@ -7,7 +7,7 @@ $controller = new Controller();
 // Handle form submission
 $controller->handleFormSubmission();
 
-// Display appointments
+// alles werkt
 ?>
 
 
